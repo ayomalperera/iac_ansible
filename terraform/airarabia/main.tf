@@ -266,6 +266,16 @@ resource "aws_instance" "haproxy" {
     Environment = "production"
   }
 }
+# SSH KEYS
+
+resource "aws_key_pair" "airarabia" {
+  key_name   = "airarabia"
+  public_key = file("~/.ssh/id_ed25519.pub")
+
+  tags = {
+    Name = "airarabia-key"
+  }
+}
 
 
 # EC2 - APP SERVERS

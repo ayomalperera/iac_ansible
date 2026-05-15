@@ -26,10 +26,8 @@ variable "instance_type" {
   default = "t3.micro"
 }
 
-variable "key_name" {
-  description = "airarabia"
-}
+
 
 variable "ami_id" {
-  description = "Ubuntu AMI"
+  default = "ami-0a56f8447277affd8"
 }

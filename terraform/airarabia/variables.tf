@@ -27,7 +27,7 @@ variable "instance_type" {
 }
 
 variable "key_name" {
-  description = "AWS EC2 Key Pair Name"
+  description = "airarabia"
 }
 
 variable "ami_id" {

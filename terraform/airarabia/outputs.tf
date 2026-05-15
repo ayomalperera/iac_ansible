@@ -1,11 +1,10 @@
-output "public_vm_ip" {
-  value = aws_instance.public_vm.public_ip
+output "haproxy_public_ip" {
+  value = aws_instance.haproxy.public_ip
 }
 
-output "private_vm_1_ip" {
-  value = aws_instance.private_vm_1.private_ip
-}
-
-output "private_vm_2_ip" {
-  value = aws_instance.private_vm_2.private_ip
+output "app_private_ips" {
+  value = {
+    for k, v in aws_instance.app_servers :
+    k => v.private_ip
+  }
 }

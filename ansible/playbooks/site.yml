@@ -1,0 +1,35 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install common packages
+      apt:
+        name:
+          - curl
+          - vim
+          - unzip
+          - htop
+        state: present
+
+- hosts: haproxy
+  become: yes
+
+  tasks:
+    - name: Install HAProxy
+      apt:
+        name: haproxy
+        state: present
+
+- hosts: app
+  become: yes
+
+  tasks:
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present

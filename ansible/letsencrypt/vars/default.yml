@@ -1,8 +1,0 @@
-certbot_site_names: {
-    host1: "web1.linuxbuz.com",
-    host2: "web2.linuxbuz.com",
- }
- 
-certbot_package: "python3-certbot-apache"
-certbot_plugin: "apache"
-certbot_mail_address: hitjethva@gmail.com

@@ -1,0 +1,8 @@
+---
+- name: Configure HAProxy
+  hosts: haproxy
+  become: yes
+
+  roles:
+    - common
+    - haproxy

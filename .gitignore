@@ -3,3 +3,11 @@
 *.tfstate.*
 crash.log
 terraform.tfvars
+
+*.retry
+*.log
+.cache/
+__pycache__/
+*.pem
+vault_pass.txt
+.env
